@@ -18,34 +18,56 @@
       }
       
       input.key {
-        font-family: 'password';
+          font-family: 'password';
+          background-color: #191919;
+          border-radius: 5px;
+          width: 100%;
+          height: 40px;
+          color: #ededed;
+          padding: 7px 12px;
+          border:1px solid #828282;
       }
-
-      input[readonly] {
-        background-color: transparent;
-        border: 0;
-        box-shadow: none;
+      
+      input.result {
+          font-family: 'password';
+          background-color: #202020;
+          border-radius: 5px;
+          width: 100%;
+          height: 40px;
+          color: #ededed;
+          padding: 7px 12px;
+          border:1px solid #828282;
       }
 
       hr.rounded {
-        border-top: 2px solid #000000;
+        border-top: 2px solid #ededed;
         border-radius: 2px;
       }
 
       p.copy-msg {
         font-style: italic;
       }
+      
+      textarea {
+          background-color: #191919;
+          border-radius: 5px;
+          width: 100%;
+          height: 40px;
+          color: #ededed;
+          padding: 7px 12px;
+          border:1px solid #828282;
+      }
     </style>
   </head>
-  <body>
+  <body style="background-color:#191919;color:#ededed">
       <div class="container p-3">
         <div>
-            <label>Password</label>
-            <input class="form-control key" name="password" id="password" type="text">
+            <label>Password</label></br>
+            <input class="key" name="password" id="password" type="text">
         </div>
         <div>
-            <label>Text to Encrypt/Decrypt</label>
-            <textarea class="form-control" id="text" rows="1"></textarea>
+            <label>Text to Encrypt/Decrypt</label></br>
+            <textarea id="text" rows="1"></textarea>
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="option" id="optionEncrypt">
@@ -66,7 +88,7 @@
         <hr class="rounded">
         <h1 class="mt-1">Result:</h1>
         <div>
-            <input class="form-control" type="text" name="result" id="result" readonly>
+            <input class="result" type="text" name="result" id="result" readonly>
             <p id="copy-msg" class="copy-msg"></p>
         </div>
       </div>
