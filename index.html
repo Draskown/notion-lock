@@ -57,6 +57,11 @@
         visibility: visible;
         opacity: 1;
       }
+
+      hr.rounded {
+        border-top: 8px solid #bbb;
+        border-radius: 5px;
+      }
     </style>
   </head>
   <body>
@@ -85,9 +90,10 @@
             <button id="go" type="button" class="btn btn-primary">Generate Text</button>
             <button onclick="copy()" type="button" class="btn btn-success ml-4">Copy to clipboard</button>
         </div>
+        <hr class="rounded">
         <h1 class="mt-1">Result:</h1>
-        <div id="result" style='white-space:pre'>
-            
+        <div style='white-space:pre'>
+            <input class="form-control" type="text" name="result" id="result">
         </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
