@@ -97,6 +97,7 @@
         var copy = () => {
             var copyText = document.getElementById("result");
             copyText.select();
+            document.execCommand("copy");
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
             alert("Reslut has been copied!");
