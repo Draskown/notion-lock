@@ -17,9 +17,19 @@
         src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
       }
       
-      input.key {
-          font-family: 'password';
-          background-color: #191919;
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover, 
+      input:-webkit-autofill:focus, 
+      input:-webkit-autofill:active
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover,
+      textarea:-webkit-autofill:focus {
+          -webkit-text-fill-color: #ededed;
+          -webkit-box-shadow: 0 0 0px 1000px #1B1B1C inset;
+      }
+      
+      input.result {
+          background-color: #202020;
           border-radius: 5px;
           width: 100%;
           height: 40px;
@@ -28,9 +38,9 @@
           border:1px solid #828282;
       }
       
-      input.result {
+      input.key {
           font-family: 'password';
-          background-color: #202020;
+          background-color: #191919;
           border-radius: 5px;
           width: 100%;
           height: 40px;
