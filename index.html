@@ -20,6 +20,11 @@
       input.key {
         font-family: 'password';
       }
+
+      input[readonly] {
+        background-color: transparent;
+      }
+      
       .tooltip {
         position: relative;
         display: inline-block;
@@ -116,11 +121,11 @@
             var option = document.querySelector('input[name="option"]:checked')
             if (option.id == "optionEncrypt") {
                 var result = encrypt(text.value).toString();
-                document.getElementById("result").innerHTML = result;
+                document.getElementById("result").value = result;
             }
             if (option.id == "optionDecrypt") {
                 var result = decrypt(text.value);
-                document.getElementById("result").innerHTML = result;
+                document.getElementById("result").value = result;
             }
             copy()
         }
